@@ -1,19 +1,11 @@
+import webbrowser
 import telebot
 from telebot import types
-import webbrowser
+
 
 bot = telebot.TeleBot("6471873793:AAGwJAy5u8Puj8HxIAOyBJegV9P9QaIhrmQ")
 
-@bot.message_handler(commands= ["start"])
-def start(message):
-    markup = types.ReplyKeyboardMarkup()
-    b1 = types.KeyboardButton("ARIZYS")
-    markup.row(b1)
-    b2 = types.KeyboardButton("delete photo")
-    markup.row(b2)
-    b3 = types.KeyboardButton("edit")
-    markup.row(b3)
-    bot.send_message(message.chat.id,"HELLO", reply_markup=markup)
+
 
 @bot.message_handler(commands=["site"])
 def site(message):
@@ -35,9 +27,18 @@ def site(message):
 
 @bot.message_handler(commands=["true"])
 def main(message):
-    bot.send_message(message.chat.id, "цм")
+    bot.send_message(message.chat.id, "Коля пидор")
 
+@bot.message_handler(commands= ["menu"])
+def menu(message):
+    markup = types.ReplyKeyboardMarkup()
+    b1 = types.KeyboardButton("ARIZYS")
+    markup.row(b1)
+    b2 = types.KeyboardButton("delete photo")
+    b3 = types.KeyboardButton("edit")
 
+    markup.row(b3,b2)
+    bot.send_message(message.chat.id,"HELLO", reply_markup=markup)
 
 
 @bot.callback_query_handler(func=lambda callback: True)
