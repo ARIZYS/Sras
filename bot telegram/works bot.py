@@ -27,7 +27,7 @@ def site(message):
 
 @bot.message_handler(commands=["true"])
 def main(message):
-    bot.send_message(message.chat.id, "Коля пидор")
+    bot.send_message(message.chat.id, "Коля")
 
 @bot.message_handler(commands= ["menu"])
 def menu(message):
