@@ -6,7 +6,6 @@ import math
 def arctan(X, N):
     result = 0
     sign = 1
-    power = 1
 
     for i in range(1, 2 * N + 2, 2):
         term = sign * (X ** i) / i
@@ -39,7 +38,7 @@ elif N <= 0:
     print("Введите большее значение N")
 else:
     result = arctan(X, N)
-    exact_value = math.atan(X)  # Точное значение arctan(X) для сравнения
+    exact_value = math.atan(X)
 
     print(f"Приближенное значение arctan({X}) для N = {N}: {result}")
     print(f"Точное значение arctan({X}): {exact_value}")

@@ -10,7 +10,7 @@ def length(input_string):
         print("В строке нет слов.")
         return None
 
-# Пример использования функции
+
 input_str = input("Введите строку из русских слов, разделенных пробелами: ")
 
 result = length(input_str)
