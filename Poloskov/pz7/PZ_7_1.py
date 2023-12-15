@@ -11,5 +11,4 @@ input_str = input("Введите строку, представляющую ц�
 
 result = sum_of_digits(input_str)
 
-if result is not None:
-    print("Сумма цифр числа:", result)
+print("Сумма цифр числа:", result)

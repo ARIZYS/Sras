@@ -14,6 +14,4 @@ def length(input_string):
 input_str = input("Введите строку из русских слов, разделенных пробелами: ")
 
 result = length(input_str)
-
-if result is not None:
-    print("Длина самого длинного слова:", result)
+print("Длина самого длинного слова:", result)
